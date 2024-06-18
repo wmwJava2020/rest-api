@@ -1,23 +1,34 @@
 /**
- * Created by:Wondafrash
+ * Created by:AIDA
  * Date : 6/17/2024
- * Time : 12:19 PM
+ * Time : 1:00 PM
  */
-package com.example.userApp.shared;
+package com.example.userApp.entity;
+
+import jakarta.persistence.*;
+
 import java.io.Serial;
 import java.io.Serializable;
-
-public class UserDTO implements Serializable {
-
-    private static final long serialVersionUID = -2891942397167846044L;
+@Entity(name = "users")
+public class UserEntity implements Serializable {
+    private static final long serialVersionUID = 1091747305770933003L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+
+    @Column(nullable = false)
     private String userId;
+    @Column(nullable = false)
     private String firstName;
+
+    @Column(nullable = false)
     private String lastName;
+    @Column(nullable = false)
     private String email;
     private String password; // unencrypted plane text password
     private String encryptedPassword;
     private String emailVerificationToken;
+    @Column(nullable = false)
     private boolean emailVerificationStatus = false;
 
     public long getId() {
