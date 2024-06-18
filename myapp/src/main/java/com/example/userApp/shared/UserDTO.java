@@ -4,8 +4,8 @@
  * Time : 12:19 PM
  */
 package com.example.userApp.shared;
-import java.io.Serial;
 import java.io.Serializable;
+//import java.io.Serializable;
 
 public class UserDTO implements Serializable {
 

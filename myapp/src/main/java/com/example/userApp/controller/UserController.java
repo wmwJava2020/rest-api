@@ -19,11 +19,11 @@ public class UserController {
     @Autowired
     private UserServiceImpl userService;
 
-    @GetMapping
+    @GetMapping("/all")
     public String getUser(){
         return "User Details Called";
     }
-    @PostMapping
+    @PostMapping("/data")
     public UserReponse createUser(@RequestBody UserDetialsRequestModle requestModle){
 
         UserReponse userReponse = new UserReponse(); // initiate UserRestResponse
