@@ -3,10 +3,14 @@
  * Date : 6/18/2024
  * Time : 9:21 AM
  */
+
+/*
 package com.example.userApp.security;
 
 import com.example.userApp.service.UserService;
 import com.example.userApp.shared.UserDTO;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Marker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +27,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 import static org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build;
 
-
+@Slf4j
 @Configuration
 @EnableMethodSecurity// to provide method level security
 public class SecurityConfig {
@@ -50,7 +54,7 @@ public class SecurityConfig {
                 .password(passwordEncoder.encode("pWord"))
                 .roles("USER")
                 .build();
-
+     log.info("Encrypted using algorithms provided.......");
         return new InMemoryUserDetailsManager(admin, user);
     }
 
@@ -72,3 +76,4 @@ public class SecurityConfig {
     }
 
 }
+*/
