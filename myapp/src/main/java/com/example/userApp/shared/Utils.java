@@ -15,8 +15,6 @@ public class Utils {
 
     private final Random random = new SecureRandom();
     private final String ALPHABET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-    //private final int ITERATIONS =  1000;
-    //private final int KEY_LENGTH = 256;
 
     public String generateUserId(int length){
         return generateRandomString(length);

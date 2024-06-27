@@ -5,9 +5,8 @@
  */
 package com.example.userApp.entity;
 
-//import jakarta.persistence.*;
-
-import javax.persistence.*;
+import jakarta.persistence.*;
+import java.io.Serial;
 import java.io.Serializable;
 @Entity(name = "users")
 public class UserEntity implements Serializable {

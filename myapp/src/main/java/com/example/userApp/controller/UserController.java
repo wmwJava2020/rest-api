@@ -14,16 +14,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/users")// http://localhost:1809/users
 public class UserController {
     @Autowired
     private UserServiceImpl userService;
 
-    @GetMapping
+    @GetMapping()
     public String getUser(){
         return "User Details Called";
     }
-    @PostMapping
+    @PostMapping("/creates")
     public UserReponse createUser(@RequestBody UserDetialsRequestModle requestModle){
 
         UserReponse userReponse = new UserReponse(); // initiate UserRestResponse
